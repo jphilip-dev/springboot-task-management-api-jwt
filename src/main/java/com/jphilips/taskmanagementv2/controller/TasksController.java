@@ -34,7 +34,6 @@ public class TasksController {
 
 	@GetMapping("/my-tasks")
 	public List<TaskResponse> getAllMyTasks(Authentication authentication, @RequestParam(required = false) List<String> statuses) {
-		
 		return taskService.getAllMyTasks(authentication, statuses);
 	}
 	
